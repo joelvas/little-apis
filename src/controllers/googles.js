@@ -1,4 +1,4 @@
-const { getImageFromGoogle } = require('../src/helper/scraping')
+const { getImageFromGoogle } = require('../helpers/scraping')
 
 const getImage = async (req, res) => {
   console.time('getImage')

@@ -13,7 +13,7 @@ app.use('/', (req, res) => {
 })
 app.use('/images', require('./routes/images'))
 app.use('/weathers', require('./routes/weathers'))
-app.use('/googles', require('./routes/googles'))
+app.use('/google', require('./routes/google'))
 
 app.listen(process.env.PORT, () => {
   console.log('Server on port 8000')
