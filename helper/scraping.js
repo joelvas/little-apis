@@ -1,4 +1,4 @@
-const { chromium } = require('playwright/chromium')
+const { chromium } = require('playwright-chromium')
 
 const getImageFromGoogle = async (query) => {
   const browser = await chromium.launch({ chromiumSandbox: false })
