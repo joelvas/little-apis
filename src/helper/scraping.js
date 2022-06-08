@@ -19,6 +19,7 @@ const getImageFromGoogle = async (query) => {
   await browser.close()
   return link
 }
+
 module.exports = {
   getImageFromGoogle
 }
