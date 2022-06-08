@@ -7,10 +7,6 @@ const app = express()
 
 app.use(cors())
 app.use(fileUpload({ useTempFiles: true }))
-
-app.use('/', (req, res) => {
-  return res.status(200).json({ msg: 'Hello User' })
-})
 app.use('/images', require('./routes/images'))
 app.use('/weathers', require('./routes/weathers'))
 app.use('/google', require('./routes/google'))
