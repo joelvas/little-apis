@@ -1,7 +1,7 @@
-const { chromium } = require('playwright')
+const { firefox } = require('playwright-firefox')
 
 const getImageFromGoogle = async (query) => {
-  const browser = await chromium.launch({ args: ['--no-sandbox'] })
+  const browser = await firefox.launch()
   const page = await browser.newPage()
   await page.goto(
     'https://www.google.com/search?q=' + query.replace(/ /g, '+') + '&tbm=isch'
