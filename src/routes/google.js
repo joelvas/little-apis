@@ -1,7 +1,7 @@
 const { Router } = require('express')
-const { getImage } = require('../controllers/googles')
+const { getImage } = require('../controllers/google')
 
 const router = Router()
 
-router.get('/image/', getImage)
+router.get('/image', getImage)
 module.exports = router

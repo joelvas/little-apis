@@ -5,7 +5,7 @@ const getImage = async (req, res) => {
   const link = await getImageFromGoogle(req.query.query)
 
   console.timeEnd('getImage')
-  res.status(200).json(link)
+  res.send('<img src="' + link + '" />')
 }
 module.exports = {
   getImage
