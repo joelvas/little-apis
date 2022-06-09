@@ -1,13 +1,12 @@
 const { getImageFromGoogle } = require('../helpers/scraping')
 
 const getImage = async (req, res) => {
-  console.time('getImage')
+  const query = req.query.query
+  if (!query) {
+    return res.status(400).json({ msg: 'Please provide a query' })
+  }
   const link = await getImageFromGoogle(req.query.query)
-
-  console.timeEnd('getImage')
-  res.send(
-    '<img src="' + link + '" style="max-width: 100vw; max-height: 100vh" />'
-  )
+  res.render('index', { link })
 }
 module.exports = {
   getImage
