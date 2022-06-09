@@ -3,5 +3,5 @@ const { getImage } = require('../controllers/google')
 
 const router = Router()
 
-router.get('/image', getImage)
+router.get('/image/:query', getImage)
 module.exports = router
